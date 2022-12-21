@@ -11,6 +11,7 @@ while cap.isOpened():
     # start = time()
     ret, frame = cap.read()
     result = model(frame)
+    
     cv2.imshow('Screen', np.squeeze(result.render()))
     if cv2.waitKey(10) & 0xff == ord('x'):
         break
